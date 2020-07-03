@@ -1,18 +1,126 @@
+.hero {
+  width: 100vw;
+  height: 400px;
+  background-image: url(./img/hero.jpg);
+  background-size: cover;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero nav {
+  align-self: flex-end;
+  font-size: 25px;
+  padding-right: 200px;
+}
+
+nav a {
+  color: thistle;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: black;
+  border-radius: 10px;
+  padding: 2px;
+}
+
 body {
-    font-family: 'Balsamiq Sans', cursive;
-
+  font-family: "Balsamiq Sans", cursive;
+  margin: 0px;
+  background-image: url(./img/back.jpg);
+  background-size: cover;
 }
 
-h1 {
-    background-color: black;
-    color: azure;
-    text-align: center;
-    padding: 30px;
-    font-size: 50px;
+main {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-h2 {
-    text-align: center
-    ;
+.Interests {
+  background-color: dodgerblue;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.Interests h2 {
+  font-size: 32px;
+  text-align: center;
 }
 
+.Interests ul {
+  padding-left: 40%;
+}
+
+.films {
+  background-color: dodgerblue;
+  border-radius: 20px;
+  padding-top: 15px;
+  margin-bottom: 10px;
+}
+.films h2 {
+  text-align: center;
+  font-size: 32px;
+}
+.films ul {
+  padding-left: 45%;
+}
+.film_img {
+  display: flexbox;
+  padding: 10px;
+}
+
+.games {
+  background-color: dodgerblue;
+  border-radius: 20px;
+  padding-top: 15px;
+  margin-bottom: 10px;
+}
+.games h2 {
+  text-align: center;
+  font-size: 32px;
+}
+.games ul {
+  padding-left: 45%;
+}
+.games_img {
+  display: flexbox;
+  padding: 10px;
+}
+.art {
+  background-color: dodgerblue;
+  border-radius: 20px;
+  padding-top: 15px;
+  margin-bottom: 10px;
+}
+.art h3 {
+  text-align: center;
+  font-size: 32px;
+}
+.artembeds {
+  padding: 10px;
+}
+.tweets {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  align-content: center;
+}
+.hero h1,
+.hero h2 {
+  background-color: black;
+  color: azure;
+  align-self: center;
+}
+
+.hero h1 {
+  border-top: 160px;
+  border-bottom: 10px;
+  font-size: 48px;
+}
+.hero h2 {
+  border-top: 10px;
+}
+footer {
+  text-align: center;
+}
