@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="./styles.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -15,18 +15,47 @@
   <body>
     <section class="hero">
       <nav>
-        <a href="#Interests">Interests</a>
-        <a href="#films">Fav Films</a>
-        <a href="#games">Fav Games</a>
-        <a href="#art">Art</a>
+        <div class="dropdown">
+          <input type="checkbox" id="dropdown" />
+
+          <label class="dropdown__face" for="dropdown">
+            <div class="dropdown__text">Check me out</div>
+
+            <div class="dropdown__arrow"></div>
+          </label>
+
+          <ul class="dropdown__items">
+            <li><a href="#Interests">😺</a></li>
+            <li><a href="#films">🙂</a></li>
+            <li><a href="#games">😎</a></li>
+            <li><a href="#art">🤗</a></li>
+          </ul>
+        </div>
+
+        <svg>
+          <filter id="goo">
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="10"
+              result="blur"
+            />
+            <feColorMatrix
+              in="blur"
+              type="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+              result="goo"
+            />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </svg>
       </nav>
       <h1>Will's Site</h1>
       <h2>a cool dude</h2>
     </section>
 
     <main>
-      <section class="Interests">
-        <h2 id="Interests">Interests</h2>
+      <section class="Interests" id="Interests">
+        <h2>Interests</h2>
         <p>
           I'm a 22 year old guy from Australia. Here's a selection of things I
           waste my life on :P
@@ -38,8 +67,8 @@
           <li>Drawing/Painting</li>
         </ul>
       </section>
-      <section class="films">
-        <h2 id="films">Favourite Films</h2>
+      <section class="films" id="films">
+        <h2>Favourite Films</h2>
 
         <ul>
           <li>The Crow</li>
@@ -82,8 +111,8 @@
           </a>
         </section>
       </section>
-      <section class="games">
-        <h2 id="games">Favourite Games</h2>
+      <section class="games" id="games">
+        <h2>Favourite Games</h2>
         <ul>
           <li>Kya: Dark Lineage</li>
           <li>A Short Hike</li>
@@ -119,12 +148,13 @@
 
       <p>I'm real interesting I promise</p>
       <img
+        id="isabelle"
         src="https://thumbs.gfycat.com/ApprehensiveSomberGosling-max-1mb.gif"
         alt=""
       />
 
-      <section class="art">
-        <h3 id="art">I also do art, check these out!</h3>
+      <section class="art" id="art">
+        <h3>I also do art, check these out!</h3>
         <section class="artembeds">
           <iframe
             width="640"
@@ -151,7 +181,7 @@
           >
           </iframe>
           <section class="tweets">
-            <blockquote class="twitter-tweet" tw-align-center>
+            <blockquote class="twitter-tweet" id="firstTweet">
               <p lang="en" dir="ltr">
                 Drew this for
                 <a href="https://twitter.com/malorie_hope_?ref_src=twsrc%5Etfw"
@@ -174,7 +204,7 @@
               src="https://platform.twitter.com/widgets.js"
               charset="utf-8"
             ></script>
-            <blockquote class="twitter-tweet" data-lang="en">
+            <blockquote class="twitter-tweet" data-lang="en" id="secondTweet">
               <p lang="en" dir="ltr">
                 PLANT<br />Im never actually going to finish this. <br />Have
                 fun with my
@@ -234,6 +264,10 @@
 
     <footer>
       <p>Made with &hearts; by William Dow</p>
+      <p>
+        Dropdown Menu made by
+        <a href="https://codepen.io/Markshall">Mark Eriksson</a>
+      </p>
     </footer>
   </body>
 </html>
