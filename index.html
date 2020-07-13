@@ -15,39 +15,41 @@
   <body>
     <section class="hero">
       <nav>
-        <div class="dropdown">
-          <input type="checkbox" id="dropdown" />
+        <div class="navmaster">
+          <div class="dropdown">
+            <input type="checkbox" id="dropdown" />
 
-          <label class="dropdown__face" for="dropdown">
-            <div class="dropdown__text">Check me out</div>
+            <label class="dropdown__face" for="dropdown">
+              <div class="dropdown__text">Check me out</div>
 
-            <div class="dropdown__arrow"></div>
-          </label>
+              <div class="dropdown__arrow"></div>
+            </label>
 
-          <ul class="dropdown__items">
-            <li><a href="#Interests">😺</a></li>
-            <li><a href="#films">🙂</a></li>
-            <li><a href="#games">😎</a></li>
-            <li><a href="#art">🤗</a></li>
-          </ul>
+            <ul class="dropdown__items">
+              <li><a href="#Interests">😺</a></li>
+              <li><a href="#films">🙂</a></li>
+              <li><a href="#games">😎</a></li>
+              <li><a href="#art">🤗</a></li>
+            </ul>
+          </div>
+
+          <svg>
+            <filter id="goo">
+              <feGaussianBlur
+                in="SourceGraphic"
+                stdDeviation="10"
+                result="blur"
+              />
+              <feColorMatrix
+                in="blur"
+                type="matrix"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                result="goo"
+              />
+              <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+          </svg>
         </div>
-
-        <svg>
-          <filter id="goo">
-            <feGaussianBlur
-              in="SourceGraphic"
-              stdDeviation="10"
-              result="blur"
-            />
-            <feColorMatrix
-              in="blur"
-              type="matrix"
-              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
-              result="goo"
-            />
-            <feBlend in="SourceGraphic" in2="goo" />
-          </filter>
-        </svg>
       </nav>
       <h1>Will's Site</h1>
       <h2>a cool dude</h2>
